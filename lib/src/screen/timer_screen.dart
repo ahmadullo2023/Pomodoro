@@ -5,7 +5,7 @@ import '../common/model/timer_model.dart';
 import '../widget/custom_app_bar.dart';
 import '../widget/custom_button_app_bar.dart';
 import '../widget/custom_fab_location.dart';
-import '../widget/setting_page.dart';
+import 'setting_page.dart';
 import 'timer_page.dart';
 
 class TimerScreen extends StatefulWidget {

@@ -29,44 +29,44 @@ class CustomTimerView extends StatelessWidget {
         children: data
             .map<Widget>(
               (e) => Align(
-            alignment: Alignment.center,
-            child: SizedBox.square(
-              dimension: size.height * 0.33,
-              child: DecoratedBox(
-                decoration: const BoxDecoration(
-                  color: AppColor.mainColor,
-                  shape: BoxShape.circle,
-                ),
+                alignment: Alignment.center,
                 child: SizedBox.square(
-                  dimension: 250,
-                  child: Padding(
-                    padding: const EdgeInsets.all(20),
-                    child: ValueListenableBuilder(
-                      valueListenable: indicatorValue,
-                      builder: (context, value, child) {
-                        return CustomIndicator(
-                          value: value,
-                          width: 10,
-                          child: Center(
-                            child: Text(
-                              "${((e.selectedTime.value / 1000).ceil() ~/ 60).toString().padLeft(2, "0")}"
+                  dimension: size.height * 0.33,
+                  child: DecoratedBox(
+                    decoration: const BoxDecoration(
+                      color: AppColor.mainColor,
+                      shape: BoxShape.circle,
+                    ),
+                    child: SizedBox.square(
+                      dimension: 250,
+                      child: Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: ValueListenableBuilder(
+                          valueListenable: indicatorValue,
+                          builder: (context, value, child) {
+                            return CustomIndicator(
+                              value: value,
+                              width: 10,
+                              child: Center(
+                                child: Text(
+                                  "${((e.selectedTime.value / 1000).ceil() ~/ 60).toString().padLeft(2, "0")}"
                                   ":"
                                   "${((e.selectedTime.value / 1000).ceil() % 60).toString().padLeft(2, "0")}",
-                              style: const TextStyle(
-                                color: AppColor.white,
-                                fontSize: 30,
+                                  style: const TextStyle(
+                                    color: AppColor.white,
+                                    fontSize: 30,
+                                  ),
+                                ),
                               ),
-                            ),
-                          ),
-                        );
-                      },
+                            );
+                          },
+                        ),
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
-          ),
-        )
+            )
             .toList(),
       ),
     );

@@ -31,14 +31,14 @@ class SectionMaker extends StatelessWidget {
           children: data
               .map(
                 (e) => ValueListenableBuilder(
-              valueListenable: pageCount,
-              builder: (context, value, child) => _Buttons(
-                item: e,
-                page: value,
-                onPressed: onPressed,
-              ),
-            ),
-          )
+                  valueListenable: pageCount,
+                  builder: (context, value, child) => _Buttons(
+                    item: e,
+                    page: value,
+                    onPressed: onPressed,
+                  ),
+                ),
+              )
               .toList(),
         ),
         Center(
@@ -112,18 +112,18 @@ class _Buttons extends StatelessWidget {
       onPressed: onPressed(page, item.id),
       child: (page == item.id)
           ? Text(
-        item.sectionName,
-        style: TextStyle(
-          color: AppColor.mainColor,
-          fontSize: size.width > 360 ? 20 : 14,
-        ),
-      )
+              item.sectionName,
+              style: TextStyle(
+                color: AppColor.mainColor,
+                fontSize: size.width > 360 ? 20 : 14,
+              ),
+            )
           : Text(
-        item.sectionName,
-        style: TextStyle(
-          fontSize: size.width > 360 ? 14 : 10,
-        ),
-      ),
+              item.sectionName,
+              style: TextStyle(
+                fontSize: size.width > 360 ? 14 : 10,
+              ),
+            ),
     );
   }
 }

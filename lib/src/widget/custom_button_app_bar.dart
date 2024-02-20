@@ -88,11 +88,6 @@ class IconBuilder extends StatelessWidget {
       IconButton(
         onPressed: onPressed,
         icon: icon,
-        // icon: Image(
-        //   image: AssetImage(icon),
-        //   height: 30,
-        //   width: 30,
-        // ),
       ),
       AnimatedOpacity(
         opacity: opacityValue,

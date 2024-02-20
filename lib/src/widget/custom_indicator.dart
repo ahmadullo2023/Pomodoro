@@ -19,14 +19,14 @@ class CustomIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => CustomPaint(
-    painter: IndicatorPaint(
-      value: value,
-      width: width,
-      color: color,
-      colorBG: colorBG,
-    ),
-    child: child,
-  );
+        painter: IndicatorPaint(
+          value: value,
+          width: width,
+          color: color,
+          colorBG: colorBG,
+        ),
+        child: child,
+      );
 }
 
 class IndicatorPaint extends CustomPainter {
